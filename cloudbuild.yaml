@@ -19,6 +19,7 @@ steps:
       - $_SERVICE_NAME
       - "--image=$_AR_HOSTNAME/$_PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA"
       - "--region=$_DEPLOY_REGION"
+      - "--allow-unauthenticated"
     id: Deploy
 images:
   - "$_AR_HOSTNAME/$_PROJECT_ID/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA"
